@@ -1,0 +1,171 @@
+/*
+	
+*/
+* {
+	font-family: 'Century Gothic', serif;
+}
+
+h2, p {
+	color: rgb(0, 129, 129);
+}
+
+body {
+	background-color: #000;
+	min-width: 240px;
+	min-height: 100vh;
+}
+
+.gridContainer {
+	width: 90%;
+	padding-top: 20px;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.mainHeader {
+	width: 100%;
+	background-color: blue;
+	display: flex;
+	align-content: flex-start;
+	justify-content:space-evenly;
+}
+
+.logoSpace {
+	width: 50px;
+	margin: auto;
+}
+
+.logoImg {
+	width: 50px;
+}
+
+.mainTitle {
+	width: calc(100% - 75px);
+}
+
+h1 {
+		color:#fff;
+}
+
+.mainNav {
+	width: 100%;
+	min-height: 25px;
+	background-color: #5b5;
+	display: flex;
+	justify-content: start;
+	align-content: center;
+	flex-wrap: wrap;
+}
+
+.mainNav div {
+	display: inline-block;
+	color: darkgreen;
+	padding: 3px 10px;
+}
+
+.mainNav div:hover > a {
+	color: #fff;
+}
+
+.mainNav div:hover {
+	color: #fff;
+}
+
+.mainNav div a {
+	color: darkgreen;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.mainNav div i {
+	box-sizing: border-box;
+	text-align: right;
+	margin-right: 2px;
+}
+
+.mainBlock {
+	width: 100%;
+	padding-top: 20px;
+	background-color: aqua;
+	flex-grow: 2;
+	flex-shrink:0;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.articulo {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	border-bottom: 3px solid rgba(128,128,128,0.5);
+}
+
+.articleHeader {
+	width: 100%;
+	padding: 20px 10px 10px 20px;
+	display: flex;
+	min-height: 80px;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+audio {
+	width: 100%;
+	padding: 10px;
+}
+
+.sideBar {
+	background-color: lightseagreen;
+	width: 100%;
+	padding: 10px 20px;
+}
+
+aside p {
+	color: #fff;
+}
+
+footer p {
+	color: #fff;
+}
+
+.pageFooter {	
+	width: 100%;
+	padding: 10px;
+	background-color: cadetblue;
+	display: flex;
+	justify-content: start;
+	align-content: center;
+}
+
+@media screen and (min-width: 700px) {
+	.gridContainer {
+		display: grid;
+		grid-template-columns: 3fr 1fr;
+		grid-template-rows: 75px 25px 1fr 30px;
+		grid-auto-flow: dense;
+	}
+
+	.mainHeader {
+		grid-column: 1 / span2;
+	}
+
+	.mainNav {
+		grid-column: 1 / span2;
+		min-height: auto;
+		height: 25px;
+		justify-content: end;
+	}
+
+	.sideBar {
+		min-width: 200px;
+	}
+
+	.pageFooter {
+		grid-column: 1 / span2;
+	}
+}
